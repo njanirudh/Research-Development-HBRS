@@ -38,6 +38,7 @@ class ArucoMeasurement:
                 self.__r_vec, self.__t_vec, _ = aruco.estimatePoseSingleMarkers(corner_pnts[i], 0.05,
                                                                                 self.__cam_mat,
                                                                                 self.__dist_mat)
+                self.__conversion_ratio = (corner_pnts[0] + corner_pnts[2]) / 2
 
                 if (self.DEBUG_DRAW == True):
                     aruco.drawAxis(image, self.__cam_mat, self.__dist_mat, self.__r_vec[0], self.__t_vec[0],
