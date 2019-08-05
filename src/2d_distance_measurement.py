@@ -4,12 +4,12 @@ import cv2.aruco as aruco
 
 class ArucoMeasurement:
 
-    def __init__(self, length :int):
+    def __init__(self):
         """
 
         :param length: Length of a side of the Aruco marker
         """
-        self.__aruco_length = length
+        self.__aruco_length = None
         self.__conversion_ratio = None
 
         self.__cam_mat = None
@@ -25,7 +25,7 @@ class ArucoMeasurement:
         self.__cam_mat = None
         self.__dist_mat = None
 
-    def set_calibration_image(self, image):
+    def set_calibration_image(self, image , side :int , distance :int ):
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
         # lists of ids and the corners belonging to each id
@@ -38,7 +38,8 @@ class ArucoMeasurement:
                 self.__r_vec, self.__t_vec, _ = aruco.estimatePoseSingleMarkers(corner_pnts[i], 0.05,
                                                                                 self.__cam_mat,
                                                                                 self.__dist_mat)
-                self.__conversion_ratio = (corner_pnts[0] + corner_pnts[2]) / 2
+                self.__conversion_ratio = ((corner_pnts[0] + corner_pnts[2]) / 2
+                                           + (corner_pnts[1] + corner_pnts[3]) / 2)/2
 
                 if (self.DEBUG_DRAW == True):
                     aruco.drawAxis(image, self.__cam_mat, self.__dist_mat, self.__r_vec[0], self.__t_vec[0],
@@ -47,6 +48,8 @@ class ArucoMeasurement:
 
             cv2.putText(image, "Id: " + str(ids), (0, 64), cv2.FONT_HERSHEY_SIMPLEX
                         , 1, (0, 255, 0), 2, cv2.LINE_AA)
+
+        return image
 
 
     def get_distance_from_image(self,image):
@@ -56,6 +59,7 @@ class ArucoMeasurement:
         corner_pnts, ids, rejectedImgPoints = aruco.detectMarkers(gray, self.__aruco_dict,
                                                                        parameters=self.__parameters)
 
+
         if np.all(ids != None):
             for i in range(len(ids)):
                 # Estimate pose of each marker and return the values rvet and tvec-different from camera coefficients
@@ -71,6 +75,7 @@ class ArucoMeasurement:
             cv2.putText(image, "Id: " + str(ids), (0, 64), cv2.FONT_HERSHEY_SIMPLEX
                         , 1, (0, 255, 0), 2, cv2.LINE_AA)
 
+        return image
 
 if __name__ == "__main__":
 
