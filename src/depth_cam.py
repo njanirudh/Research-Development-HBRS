@@ -4,10 +4,12 @@ import cv2
 from openni import openni2
 from openni import _openni2 as c_api
 
+# Set path to OpenNI SDK
 dist = '/home/anirudh/SDK/cpp/OpenNI2/OpenNI-Linux-x64-2.2/Redist'
 
 ## initialize openni and check
-openni2.initialize(dist)  # accepts the path of the OpenNI redistribution
+# accepts the path of the OpenNI redistribution
+openni2.initialize(dist)  
 if (openni2.is_initialized()):
     print("openNI2 initialized")
 else:
