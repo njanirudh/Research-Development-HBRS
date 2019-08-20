@@ -12,7 +12,10 @@ O = Low accuracy
 
 #### Dataset
 * COCO dataset only has 'Door' class no 'Handles'
+(http://cocodataset.org/#explore)
+
 * OIDv4 has both 'Door' and 'Handles'
+(https://storage.googleapis.com/openimages/web/index.html)
 
 #### Model
 * SSD is faster but is less accurate 
