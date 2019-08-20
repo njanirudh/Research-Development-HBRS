@@ -5,7 +5,7 @@
 |    OpenCV - SSDV2 - OIDv4    |   X  |    O   |
 |   Tf&OpenCV - SSDV2 - COCO   |   O  |        |
 
-X = High accuracy
+X = High accuracy    
 O = Low accuracy
 
 ### Observations :
