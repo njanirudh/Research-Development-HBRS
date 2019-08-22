@@ -2,6 +2,7 @@
 
 Deep learning will be used for performing the task of 'handle' detection and 'door' detection.
 
+--------
 ### Experimentation
 
 Two common frameworks are being tested for running the object detection inference :
@@ -24,6 +25,7 @@ Two models are being tested for the task:
 X = High accuracy    
 O = Low accuracy
 
+--------
 ### Observations :
 
 #### Dataset
@@ -38,6 +40,7 @@ both the required classes.
 * FR-CNN model is not compatible with OpenCV-DNN as few of the layer 
 definitions are missing. 
 
+--------
 ### References
 #### Note : The relevant documentation and model links for each of the task are in the .ipynb or .py files
 1. Ren, Shaoqing, Kaiming He, Ross B. Girshick and Jian Sun. “Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks.” IEEE Transactions on Pattern Analysis and Machine Intelligence 39 (2015): 1137-1149.
