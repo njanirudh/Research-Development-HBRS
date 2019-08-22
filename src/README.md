@@ -1,6 +1,6 @@
 # Deep Learning for object detection 
 
-|Model                         | Door | Handle |
+| Pretrained Model             | Door | Handle |
 |:----------------------------:|:----:|:------:|
 | Tensorflow - FR-CNN - OIDv4  |   X  |    X   |
 |    OpenCV - SSDV2 - OIDv4    |   X  |    O   |
