@@ -1,5 +1,6 @@
+# Deep Learning for object detection 
 
-|                              | Door | Handle |
+|Model                         | Door | Handle |
 |:----------------------------:|:----:|:------:|
 | Tensorflow - FR-CNN - OIDv4  |   X  |    X   |
 |    OpenCV - SSDV2 - OIDv4    |   X  |    O   |
@@ -23,3 +24,6 @@ O = Low accuracy
 both the required classes.
 * FR-CNN model is not compatible with OpenCV-DNN as few of the layer 
 definitions are missing. 
+
+
+#### Note : The relevant tutorial links for each of the task are in the .ipynb or .py files
