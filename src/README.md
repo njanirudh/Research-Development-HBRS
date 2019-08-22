@@ -7,9 +7,9 @@ Deep learning will be used for performing the task of 'handle' detection and 'do
 
 Two common frameworks are being tested for running the object detection inference :
 1. [TensorFlow](https://github.com/tensorflow/models/tree/master/research/object_detection)
-2. [OpenCV-Dnn](https://docs.opencv.org/master/d2/d58/tutorial_table_of_content_dnn.html)
+2. [OpenCV-DNN](https://docs.opencv.org/master/d2/d58/tutorial_table_of_content_dnn.html)
 
-Tensorflow has both the training and the inferencing functionality whereas OpenCV-Dnn module 
+Tensorflow has both the training and the inferencing functionality whereas OpenCV-DNN module 
 supports only inference and requires a [few extra steps](https://github.com/opencv/opencv/wiki/TensorFlow-Object-Detection-API) for running the pretrained model.
 
 Two models are being tested for the task:
