@@ -25,10 +25,11 @@ inference engine and the model have been done below:
 | FR-CNN + COCO      |   Tf      |   X  |    -   |
 | SSDV2  + OIDv4     |   Tf      |   X  |    X   |
 | SSDV2  + COCO      |   Tf      |   X  |    -   |
-| SSDV2  + OIDv4     |   OpenCV  |   X  |    O   |
-| SSDV2  + COCO      |   OpenCV  |   O  |    -   |
+|                    |           |      |        |
 | FR-CNN + OIDv4     |   OpenCV  |   X  |    O   |
 | FR-CNN + COCO      |   OpenCV  |   O  |    -   |
+| SSDV2  + OIDv4     |   OpenCV  |   X  |    O   |
+| SSDV2  + COCO      |   OpenCV  |   O  |    -   |
     
 I.E = Inference engine    
 '-'  = Not available/Possible    
