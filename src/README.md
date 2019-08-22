@@ -25,9 +25,9 @@ inference engine and the model have been done below:
 | FR-CNN + COCO      |   Tf      |   X  |    -   |
 | SSDV2 + OIDv4      |   OpenCV  |   X  |    O   |
 | SSDV2 + COCO       |   OpenCV  |   O  |    -   |
-
-I.E = Inference engine
--  = Not available/Possible
+    
+I.E = Inference engine    
+'-'  = Not available/Possible    
 X = High accuracy    
 O = Low accuracy
 
