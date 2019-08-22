@@ -39,6 +39,6 @@ both the required classes.
 definitions are missing. 
 
 ### References
-#### Note : The relevant tutorial and model links for each of the task are in the .ipynb or .py files
+#### Note : The relevant documentation and model links for each of the task are in the .ipynb or .py files
 1. Ren, Shaoqing, Kaiming He, Ross B. Girshick and Jian Sun. “Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks.” IEEE Transactions on Pattern Analysis and Machine Intelligence 39 (2015): 1137-1149.
 2. Liu, Weiwei, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott E. Reed, Cheng-Yang Fu and Alexander C. Berg. “SSD: Single Shot MultiBox Detector.” ECCV (2016).
