@@ -26,4 +26,4 @@ both the required classes.
 definitions are missing. 
 
 
-#### Note : The relevant tutorial links for each of the task are in the .ipynb or .py files
+#### Note : The relevant tutorial and model links for each of the task are in the .ipynb or .py files
