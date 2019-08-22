@@ -10,18 +10,24 @@ Two common frameworks are being tested for running the object detection inferenc
 2. [OpenCV-Dnn](https://docs.opencv.org/master/d2/d58/tutorial_table_of_content_dnn.html)
 
 Tensorflow has both the training and the inferencing functionality whereas OpenCV-Dnn module 
-supports only inference and requires a few extra steps for running the pretrained model.
+supports only inference and requires a [few extra steps](https://github.com/opencv/opencv/wiki/TensorFlow-Object-Detection-API) for running the pretrained model.
 
 Two models are being tested for the task:
 1. [FRCNN](https://arxiv.org/abs/1506.01497)[2]
 2. [SSD](https://arxiv.org/abs/1512.02325)[1]
 
-| Pretrained Model             | Door | Handle |
-|:----------------------------:|:----:|:------:|
-| Tensorflow - FR-CNN - OIDv4  |   X  |    X   |
-|    OpenCV - SSDV2 - OIDv4    |   X  |    O   |
-|   Tf&OpenCV - SSDV2 - COCO   |   O  |        |
+Qualitative comparison for the different combinations of the 
+inference engine and the model have been done below: 
 
+|Model + Dataset     |  I.E      | Door | Handle |
+|:------------------:|:---------:|:----:|:------:|
+| FR-CNN + OIDv4     |   Tf      |   X  |    X   |
+| FR-CNN + COCO      |   Tf      |   X  |    -   |
+| SSDV2 + OIDv4      |   OpenCV  |   X  |    O   |
+| SSDV2 + COCO       |   OpenCV  |   O  |    -   |
+
+I.E = Inference engine
+-  = Not available/Possible
 X = High accuracy    
 O = Low accuracy
 
