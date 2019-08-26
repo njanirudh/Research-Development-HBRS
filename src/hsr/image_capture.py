@@ -28,28 +28,29 @@ class ImgCapture(object):
         rospy.wait_for_message(self.topic_name, Image, timeout=5.0)
 
     def set_current_mode(self,mode):
+        self._image_sub.unregister()
         if mode == self.STEREO_L :
             self._image_sub = rospy.Subscriber(
             self.STEREO_L, Image, self._color_image_cb)
-            rospy.wait_for_message(self.STEREO_L, Image, timeout=5.0)
+            # rospy.wait_for_message(self.STEREO_L, Image, timeout=5.0)
             print("Mode : STEREO_L")
 
         if mode == self.STEREO_R :
             self._image_sub = rospy.Subscriber(
             self.STEREO_R, Image, self._color_image_cb)
-            rospy.wait_for_message(self.STEREO_R, Image, timeout=5.0)
+            # rospy.wait_for_message(self.STEREO_R, Image, timeout=5.0)
             print("Mode : STEREO_R")
 
         if mode == self.RGB_D :
             self._image_sub = rospy.Subscriber(
             self.RGB_D, Image, self._color_image_cb)
-            rospy.wait_for_message(self.RGB_D, Image, timeout=5.0)
+            # rospy.wait_for_message(self.RGB_D, Image, timeout=5.0)
             print("Mode : RGB_D")
 
         if mode == self.HAND_CAM :
             self._image_sub = rospy.Subscriber(
             self.HAND_CAM, Image, self._color_image_cb)
-            rospy.wait_for_message(self.HAND_CAM, Image, timeout=5.0)
+            # rospy.wait_for_message(self.HAND_CAM, Image, timeout=5.0)
             print("Mode : HAND_CAM")
 
     def _color_image_cb(self, data):
@@ -69,17 +70,17 @@ def main():
 
         # UpdateGUI Window
         while not rospy.is_shutdown():
-
-            if cv2.waitKey(33) == 49 :
+            
+            if cv2.waitKey(5) == 49 :
                 img_capture.set_current_mode(ImgCapture.STEREO_L)
 
-            if cv2.waitKey(33) == 50 :
+            elif cv2.waitKey(5) == 50 :
                 img_capture.set_current_mode(ImgCapture.STEREO_R)
 
-            if cv2.waitKey(33) == 51 :
+            elif cv2.waitKey(5) == 51 :
                 img_capture.set_current_mode(ImgCapture.RGB_D)
 
-            if cv2.waitKey(33) == 52 :
+            elif cv2.waitKey(5) == 52 :
                 img_capture.set_current_mode(ImgCapture.HAND_CAM)
 
             dst_image = img_capture.extract_image()

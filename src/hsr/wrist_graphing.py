@@ -5,12 +5,12 @@ from collections import deque
 import rospy
 from geometry_msgs.msg import WrenchStamped
 
-
 class WristSensor(object):
 
 	def __init__(self):
 	
 		self.topic_name = '/hsrb/wrist_wrench/raw'
+		self.current_data = 0
 
 		## Subscribe color image data from HSR
 		self._image_sub = rospy.Subscriber(
@@ -21,15 +21,23 @@ class WristSensor(object):
 
 
 	def _wrist_cb(self, data):
+		self.current_data = data.wrench.force.x
 		print(data.wrench.force.x)
+
+	def get_current_data(self):
+		return self.current_data
 
 def main():
 	rospy.init_node('wrist_c')
 	try:
 		wrist = WristSensor()
-		spin_rate = rospy.Rate(30)
-
+		spin_rate = rospy.Rate(5)
+		
+		i = 0
 		while not rospy.is_shutdown():
+			plt.scatter(i, wrist.get_current_data())
+			i += 1
+			plt.pause(0.01)
 			spin_rate.sleep()
 
 	except rospy.ROSException as wait_for_msg_exception:
@@ -37,15 +45,3 @@ def main():
 
 if __name__ == "__main__" :
 	main()
-
-# import cv2
-# img = cv2.imread('/home/anirudh/Pictures/Selection_003.png') # load a dummy image
-# while(1):
-#     cv2.imshow('img',img)
-#     k = cv2.waitKey(33)
-#     if k==27:    # Esc key to stop
-#         break
-#     elif k==-1:  # normally -1 returned,so don't print it
-#         continue
-#     else:
-#         print(k) # else print its value
