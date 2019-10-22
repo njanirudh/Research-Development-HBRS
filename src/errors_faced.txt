@@ -1,0 +1,6 @@
+Errors :
+
+ValueError: First step cannot be zero.
+https://github.com/tensorflow/models/issues/3794
+
+Python 2 to python 3 errors
