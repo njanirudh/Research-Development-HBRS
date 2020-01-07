@@ -10,10 +10,10 @@ X_val = []
 Y_val = []
 Z_val = []
 
-with open('/home/nj/HBRS/RnD/Research-Development-HBRS/reports/drawer_handle_grasp - drawer.csv') as csv_file:
-# with open('/home/nj/HBRS/RnD/Research-Development-HBRS/reports/drawer_handle_grasp - fridge.csv') as csv_file:
+# with open('/home/nj/HBRS/RnD/Research-Development-HBRS/reports/drawer_handle_grasp - drawer.csv') as csv_file:
+with open('/home/nj/HBRS/RnD/Research-Development-HBRS/reports/drawer_handle_grasp - fridge.csv') as csv_file:
     csv_reader = pd.read_csv(csv_file, delimiter=',')
-    # print(csv_reader.head())
+    print(csv_reader.head())
     # print(csv_reader['handle_x'].tolist())
 
     X_val = csv_reader['handle_x'].tolist()
