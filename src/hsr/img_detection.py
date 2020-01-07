@@ -70,14 +70,14 @@ def main():
 	rospy.init_node('image_capture')
 	try:
 		img_capture = ImgCapture()
-		spin_rate = rospy.Rate(3)
+		spin_rate = rospy.Rate(10)
 
 		# UpdateGUI Window
 		while not rospy.is_shutdown():
 			k = cv2.waitKey(0)
 
 			dst_image = img_capture.extract_image()
-			cv2.imshow("Color Detection Image Window", dst_image)
+			# cv2.imshow("Color Detection Image Window", dst_image)
 
 			if k == 49 :
 				img_capture.set_current_mode(ImgCapture.STEREO_L)
@@ -93,7 +93,7 @@ def main():
 
 			elif k == ord('s') :
 				print("Saving image!")
-				cv2.imwrite('/home/lucy/anirudh/Images/'+ str(uuid.uuid4())+".jpg",dst_image)
+				cv2.imwrite('/home/lucy/anirudh/new_dataset/'+ str(uuid.uuid4())+".jpg",dst_image)
 			
 			elif k == ord('x') :
 				cv2.destroyAllWindows()

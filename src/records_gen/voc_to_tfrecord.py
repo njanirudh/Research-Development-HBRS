@@ -23,10 +23,16 @@ from object_detection.utils import label_map_util
 
 
 flags = tf.app.flags
-flags.DEFINE_string('image_dir', '/home/nj/Desktop/RnD/Dataset/Lucy_Doors/Images', 'Path to image directory.')
-flags.DEFINE_string('annotations_dir', '/home/nj/Desktop/RnD/Dataset/Lucy_Doors/Annotations', 'Path to annotations directory.')
-flags.DEFINE_string('output_path', '/home/nj/Desktop/RnD/Dataset/Lucy_Doors/TfRecord.tfrecord', 'Path to output TFRecord')
-flags.DEFINE_string('label_map_path', '/home/nj/Desktop/RnD/Dataset/DoorDetect-Dataset/class.pbtxt',
+# flags.DEFINE_string('image_dir', '/home/nj/Desktop/RnD/Datasets/lucy_dataset_mixed/images', 'Path to image directory.')
+# flags.DEFINE_string('annotations_dir', '/home/nj/Desktop/RnD/Datasets/lucy_dataset_mixed/annotations/voc', 'Path to annotations directory.')
+# flags.DEFINE_string('output_path', '/home/nj/Desktop/RnD/Datasets/lucy_dataset_mixed/lucy_dataset_mixed.tfrecord', 'Path to output TFRecord')
+# flags.DEFINE_string('label_map_path', '/home/nj/Desktop/RnD/Datasets/lucy_dataset_mixed/class.pbtxt',
+#                     'Path to label map proto')
+
+flags.DEFINE_string('image_dir', '/home/nj/Desktop/CV/Dataset/Images', 'Path to image directory.')
+flags.DEFINE_string('annotations_dir', '/home/nj/Desktop/CV/Dataset/Annotations/voc', 'Path to annotations directory.')
+flags.DEFINE_string('output_path', '/home/nj/Desktop/CV/Dataset/nuts_tray.tfrecord', 'Path to output TFRecord')
+flags.DEFINE_string('label_map_path', '/home/nj/Desktop/CV/Dataset/class.pbtxt',
                     'Path to label map proto')
 FLAGS = flags.FLAGS
 
@@ -83,7 +89,7 @@ def dict_to_tf_example(data, image_dir, label_map_dict):
         'image/source_id': dataset_util.bytes_feature(data['filename'].encode('utf8')),
         'image/key/sha256': dataset_util.bytes_feature(key.encode('utf8')),
         'image/encoded': dataset_util.bytes_feature(encoded_jpg),
-        'image/format': dataset_util.bytes_feature('jpeg'.encode('utf8')),
+        'image/format': dataset_util.bytes_feature('png'.encode('utf8')),
         'image/object/bbox/xmin': dataset_util.float_list_feature(xmin),
         'image/object/bbox/xmax': dataset_util.float_list_feature(xmax),
         'image/object/bbox/ymin': dataset_util.float_list_feature(ymin),

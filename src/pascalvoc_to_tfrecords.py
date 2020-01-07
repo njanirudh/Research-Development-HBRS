@@ -59,12 +59,12 @@ from datasets.dataset_utils import int64_feature, float_feature, bytes_feature
 # from datasets.pascalvoc_common import VOC_LABELS
 
 # Original dataset organisation.
-DIRECTORY_ANNOTATIONS = 'Annotations/'
-DIRECTORY_IMAGES = 'JPEGImages/'
+DIRECTORY_ANNOTATIONS = '/home/nj/Desktop/RnD/Datasets/lucy_dataset_mixed/annotations/voc'
+DIRECTORY_IMAGES = '/home/nj/Desktop/RnD/Datasets/lucy_dataset_mixed/images'
 
 # TFRecords convertion parameters.
 RANDOM_SEED = 4242
-SAMPLES_PER_FILES = 200
+SAMPLES_PER_FILES = 500
 
 
 def _process_image(directory, name):
