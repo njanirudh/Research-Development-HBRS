@@ -10,8 +10,14 @@ X_val = []
 Y_val = []
 Z_val = []
 
-# with open('/home/nj/HBRS/RnD/Research-Development-HBRS/reports/drawer_handle_grasp - drawer.csv') as csv_file:
-with open('/home/nj/HBRS/RnD/Research-Development-HBRS/reports/drawer_handle_grasp - fridge.csv') as csv_file:
+# File = '/home/nj/HBRS/RnD/Research-Development-HBRS/reports/drawer_handle_grasp - fridge.csv'
+File = '/home/nj/HBRS/RnD/Research-Development-HBRS/reports/drawer_handle_grasp - drawer.csv'
+# File = '/home/nj/HBRS/RnD/Research-Development-HBRS/reports/drawer_handle_grasp - door.csv'
+
+# File = '/home/jayasimha/NJ/GitHub/Research-Development-HBRS/reports/drawer_handle_grasp - fridge.csv'
+
+# with open() as csv_file:
+with open(File) as csv_file:
     csv_reader = pd.read_csv(csv_file, delimiter=',')
     print(csv_reader.head())
     # print(csv_reader['handle_x'].tolist())
@@ -21,10 +27,14 @@ with open('/home/nj/HBRS/RnD/Research-Development-HBRS/reports/drawer_handle_gra
     Z_val = csv_reader['handle_z'].tolist()
     success = np.array(csv_reader['Success'].tolist())
 
+    # Run for FRIDGE
     failure_x = csv_reader['X - failure'].tolist()
     failure_y = csv_reader['Y - failure'].tolist()
     failure_z = csv_reader['Z - failure'].tolist()
 
+
+
+    # # RUN for DRAWER
     # Note = csv_reader['Notes'].tolist()
     # for val in Note:
     #     print(val)
@@ -35,9 +45,9 @@ with open('/home/nj/HBRS/RnD/Research-Development-HBRS/reports/drawer_handle_gra
 
 # print(Note)
 
-failure_x_weight = [2 if x=='X' else 1 for x in failure_x]
-failure_y_weight = [2 if x=='X' else 1 for x in failure_y]
-failure_z_weight = [2 if x=='X' else 1 for x in failure_z]
+failure_x_weight = [2 if x == 'X' else 1 for x in failure_x]
+failure_y_weight = [2 if x == 'Y' else 1 for x in failure_y]
+failure_z_weight = [2 if x == 'Z' else 1 for x in failure_z]
 
 grasp_weight = [3 if x=='X' else 1 for x in grasp]
 opening_weight = [5 if x=='X' else 1 for x in opening]
