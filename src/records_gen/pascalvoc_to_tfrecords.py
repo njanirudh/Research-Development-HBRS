@@ -226,4 +226,4 @@ def run(dataset_dir, output_dir, name='voc_train', shuffling=False):
     print('\nFinished converting the Pascal VOC dataset!')
 
 if __name__ == "__main__":
-    run(".",".")
+    run("..", ".")
