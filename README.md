@@ -15,6 +15,7 @@ The general perception subtask involves detection the handle and finding the pos
 
 <img src="/images/presentation/pipeline-perception.png" width="400">
 
+The handle type and the handle 3D bounding box is sent to the Manipulation subtask where it is used to find the best best grasping point.
 
 ---
 ### Manipulation 
