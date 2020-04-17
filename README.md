@@ -7,7 +7,7 @@ in partial fulfillment of the [Masters degree in Autonomous Systems](https://www
 ### Introduction
 This R&D project deals with the study of general pipeline for a robot to manipulate a handle in the domestic environment. We mainly study the two major subtasks involved ie. Perception and Manipulation.
 
-<img src="/images/presentation/pipeline-pipeline full.png" width="800">
+<img src="/images/presentation/pipeline-pipeline full.png" width="800"></img>
 
 ---
 ### Perception 
@@ -22,7 +22,11 @@ Manipulation subtask involves 1) finding the best grasp position on the handle a
 
 <img src="/images/presentation/pipeline-manipulation_2.png " width="400">
 
-The main learning component involves finding the best position to grasp a handle.
+#### Grasp Position Learning
+The main learning component involves finding the best grasp position on the handle. This is done by using a method called a Weighted Maximum Likelihood Estimation 
+
 ---
 ### Final Results
 The robot "autonomously" detects the hande in its camera view and then uses the learnt model to find the best position to grasp the handle and opens the drawer.
+
+![](Manipulation_lq.gif)
