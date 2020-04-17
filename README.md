@@ -22,6 +22,7 @@ Manipulation subtask involves 1) finding the best grasp position on the handle a
 
 <img src="/images/presentation/pipeline-manipulation_2.png " width="400">
 
+The main learning component involves finding the best position to grasp a handle.
 ---
 ### Final Results
 The robot "autonomously" detects the hande in its camera view and then uses the learnt model to find the best position to grasp the handle and opens the drawer.
