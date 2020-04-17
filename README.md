@@ -13,14 +13,14 @@ This R&D project deals with the study of general pipeline for a robot to manipul
 ### Perception 
 The general perception subtask involves detection the handle and finding the pose of the handle.
 
-<img src="/images/presentation/pipeline-perception.png" width="600">
+<img src="/images/presentation/pipeline-perception.png" width="400">
 
 
 ---
 ### Manipulation 
 Manipulation subtask involves 1) finding the best grasp position on the handle and 2) depending on the handle type perform the control sequence to manipulate it.
 
-<img src="/images/presentation/pipeline-manipulation_2.png " width="600">
+<img src="/images/presentation/pipeline-manipulation_2.png " width="400">
 
 ---
 ### Final Results
