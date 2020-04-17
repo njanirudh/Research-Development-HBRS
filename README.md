@@ -29,4 +29,4 @@ The main learning component involves finding the best grasp position on the hand
 ### Final Results
 The robot "autonomously" detects the hande in its camera view and then uses the learnt model to find the best position to grasp the handle and opens the drawer.
 
-![](Manipulation_lq.gif)
+![](/images/presentation/Manipulation_lq.gif)
