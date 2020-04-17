@@ -7,18 +7,19 @@ in partial fulfillment of the [Masters degree in Autonomous Systems](https://www
 ### Introduction
 This R&D project deals with the study of general pipeline for a robot to manipulate a handle in the domestic environment. We mainly study the two major subtasks involved ie. Perception and Manipulation.
 
-
-
-
+<img src="/images/presentation/pipeline-pipeline full.png" width="400">
 
 
 ### Perception 
 The general perception subtask involves detection the handle and finding the pose of the handle.
 
+<img src="/images/presentation/pipeline-perception.png" width="400">
 
 
 ### Manipulation 
 Manipulation subtask involves 1) finding the best grasp position on the handle and 2) depending on the handle type perform the control sequence to manipulate it.
+
+<img src="/images/presentation/pipeline-manipulation_2.png " width="400">
 
 
 ### Final Results
