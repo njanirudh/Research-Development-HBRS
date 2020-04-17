@@ -23,7 +23,7 @@ Manipulation subtask involves 1) finding the best grasp position on the handle a
 <img src="/images/presentation/pipeline-manipulation_2.png " width="400">
 
 #### Grasp Position Learning
-The main learning component involves finding the best grasp position on the handle. This is done by using a method called a Weighted Maximum Likelihood Estimation 
+The main learning component involves finding the best grasp position on the handle. This is done by using a method called a Weighted Maximum Likelihood Estimation. 
 
 ---
 ### Final Results
