@@ -1,4 +1,4 @@
-# Manipulation of Handles in Domestic Environments
+# Manipulating Handles in Domestic Environments
 ## R&D Project
 
 This repo consists of the code and documentation for the R&D topic "Manipulation of Handles in Domestic Environments"
